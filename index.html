@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Working at the spped of dot com</title>
+<title>Working at the speed of dot com</title>
 <style>
 /*
 Stupid thing built by @coldclimate
@@ -42,18 +42,23 @@ p:hover{ x-webkit-transform: scale(1.25); -webkit-transition-timing-function: ea
 <body>
 
 <div class="shrinkwrap">
-    <h1>working at the speed of <span id="word">ss</span></h1>
+    <h1>working at the speed of <span id="word">now</span></h1>
 
 </div>
 
 <script type="text/javascript">
 	var words=["gin", "electricity", "chocolate", "oiled wrestlers", "trees", "synergy", "woodlice", "addenda", "aircraft", "alumni", "analysis", "antenna", "antithesis", "appendices", "axis", "bacilli", "bacteria", "bases", "bison", "bureaus", "cacti", "château", "children", "codices", "crisis", "data", "deer", "diagnosis", "dice", "dwarfs", "ellipses", "faux pas", "fezes", "fish", "focu", "feet", "formulas", "fungi", "geese", "graffiti", "grouse", "halves", "hoofs", "lava", "loaves", "lice ", "media", "hypermedia", "minutiae", "mice", "nebulae", "nuclei", "offspring", "ova", "oxen", "parentheses", "phenomena", "radii", "referenda", "salmon", "scarfs", "sheep", "shrimp", "species", "stimulus", "swine", "symposia", "thieves", "teeth", "trout", "tuna", "vertebra", "vertices", "vortices", "wives", "wolves"];
-	var theWord = words[Math.floor(Math.random() * words.length)];
+	if(window.location.hash) {
+  	theWord=window.location.hash.substr(1);
+} else {
+  var theWord = words[Math.floor(Math.random() * words.length)];
+}
+	
 	var span = document.getElementById('word');
 	while( span.firstChild ) {
     	span.removeChild( span.firstChild );
 	}
-span.appendChild( document.createTextNode(theWord) );
+	span.appendChild( document.createTextNode(theWord) );
 </script>
 </body>
 </html>
